@@ -22,6 +22,9 @@ class Path {
             return "stat";
         }
 
+        static string upTimePath() {
+            return "uptime";
+        }
 };
 
 #endif
