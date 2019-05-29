@@ -8,4 +8,5 @@ class Process {
     private:
         int PID;
         string user;
+        string cmd;
 };
