@@ -20,4 +20,5 @@ class Process {
         // Setter for assigining values to class attributes.
         void setProcessAttributes(int pid, string user, string cmd, double cpu_utilization, string memory_utilization, string time);
         int getPID() const;
+        int getUser() const;
 };
