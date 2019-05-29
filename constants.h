@@ -29,6 +29,10 @@ class Path {
         static string memPath() {
             return "meminfo";
         }
+
+        static string versionPath() {
+            return "version";
+        }
 };
 
 #endif
