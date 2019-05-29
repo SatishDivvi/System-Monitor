@@ -5,7 +5,7 @@ using std::endl;
 using std::string;
 
 class Process {
-    
+
     private:
         int PID;
         string user;
@@ -15,5 +15,6 @@ class Process {
         string time;
     
     public:
+        Process(){};
 
 };
