@@ -5,6 +5,7 @@ using std::endl;
 using std::string;
 
 class Process {
+    
     private:
         int PID;
         string user;
@@ -12,4 +13,7 @@ class Process {
         double cpu_utilization;
         string memory_utilization;
         string time;
+    
+    public:
+
 };
