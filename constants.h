@@ -9,6 +9,10 @@ class Path {
         static string BasePath() {
             return "/proc/";
         }
+
+        static string cmdPath() {
+            return "/cmdline";
+        }
 };
 
 #endif
