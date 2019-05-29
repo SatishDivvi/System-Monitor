@@ -9,4 +9,5 @@ class Process {
         int PID;
         string user;
         string cmd;
+        double cpu_utilization;
 };
