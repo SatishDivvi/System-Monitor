@@ -22,4 +22,5 @@ class Process {
         int getPID() const;
         string getUser() const;
         string getCMD() const;
+        double getCPUUsage() const;
 };
