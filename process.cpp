@@ -21,5 +21,5 @@ class Process {
         void setProcessAttributes(int pid, string user, string cmd, double cpu_utilization, string memory_utilization, string time);
         int getPID() const;
         string getUser() const;
-        
+        string getCMD() const;
 };
