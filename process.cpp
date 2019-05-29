@@ -11,4 +11,5 @@ class Process {
         string cmd;
         double cpu_utilization;
         string memory_utilization;
+        string time;
 };
