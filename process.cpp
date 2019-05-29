@@ -7,5 +7,5 @@ using std::string;
 class Process {
     private:
         int PID;
-
+        string user;
 };
