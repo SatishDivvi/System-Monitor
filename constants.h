@@ -25,6 +25,10 @@ class Path {
         static string upTimePath() {
             return "uptime";
         }
+
+        static string memPath() {
+            return "meminfo";
+        }
 };
 
 #endif
