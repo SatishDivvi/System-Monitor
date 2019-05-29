@@ -5,7 +5,10 @@
 using namespace std;
 
 class Path {
-
+    public:
+        static string BasePath() {
+            return "/proc/";
+        }
 };
 
 #endif
