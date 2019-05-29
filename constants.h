@@ -17,7 +17,11 @@ class Path {
         static string statusPath() {
             return "/status";
         }
-        
+
+        static string statPath() {
+            return "stat";
+        }
+
 };
 
 #endif
