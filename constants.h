@@ -13,6 +13,11 @@ class Path {
         static string cmdPath() {
             return "/cmdline";
         }
+
+        static string statusPath() {
+            return "/status";
+        }
+        
 };
 
 #endif
