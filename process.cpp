@@ -24,4 +24,5 @@ class Process {
         string getCMD() const;
         double getCPUUsage() const;
         string getMemoryUsage() const;
+        string getTime() const;
 };
