@@ -4,5 +4,8 @@
 #include <string>
 using namespace std;
 
+class Path {
+
+};
 
 #endif
