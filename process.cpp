@@ -4,5 +4,6 @@ using std::endl;
 
 class Process {
     private:
-        
+        int PID;
+
 };
