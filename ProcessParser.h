@@ -56,11 +56,11 @@ std::vector<std::string> ProcessParser::get_pid_list() {
         if(entry->d_type != DT_DIR){
             continue;
         }
-        if(std::all_of(entry->d_name, entry->d_name + entry->d_reclen, [](char c){ return std::isdigit(c); })){
+        if(std::all_of(entry->d_name, entry->d_name + std::strlen(entry->d_name), [](char c){ return std::isdigit(c); })){
             pidLists.push_back(entry->d_name);
         }
     }
-    if(!closedir(dir))
+    if(closedir(dir))
         throw std::runtime_error(std::strerror(errno));
     return pidLists;
 }
