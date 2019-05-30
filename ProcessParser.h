@@ -40,7 +40,7 @@ class ProcessParser {
 
 std::string ProcessParser::get_cmd(std::string pid){
     std::string line;
-    ifstream readFile = Util::getStream((Path::BasePath() + pid + Path::cmdPath()));
+    ifstream readFile = Util::getStream((Path::basePath() + pid + Path::cmdPath()));
     std::getline(readFile, line);
     return line;
 }
