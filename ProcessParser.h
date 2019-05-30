@@ -17,6 +17,7 @@
 #include <time.h>
 #include <unistd.h>
 #include <constants.h>
+#include <Util.h>
 
 class ProcessParser {
     public:
@@ -36,3 +37,10 @@ class ProcessParser {
         static string get_os_name();
         static std::string print_cpu_stats(std::vector<std::string> values1, std::vector<std::string>values2);
 };
+
+std::string ProcessParser::get_cmd(std::string pid){
+    std::string line;
+    ifstream readFile = Util::getStream((Path::BasePath() + pid + Path::cmdPath()));
+    std::getline(readFile, line);
+    return line;
+}
