@@ -6,7 +6,7 @@ using namespace std;
 
 class Path {
     public:
-        static string BasePath() {
+        static string basePath() {
             return "/proc/";
         }
 
