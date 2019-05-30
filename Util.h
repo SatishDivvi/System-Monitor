@@ -4,5 +4,5 @@ using namespace std;
 
 class Util {
     public:
-        string convertToTime(long int seconds);
+        static string convertToTime(long int seconds);
 };
