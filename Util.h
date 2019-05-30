@@ -19,7 +19,18 @@ string Util::convertToTime(long int seconds) {
 }
 
 string Util::getProgressBar(string percent) {
-    
+    string result = "0% ";
+    int size = 50;
+    int boundaries = (stof(percent)/100)*size;
+    for(int i=0; i<size; i++) {
+        if(i<=boundaries)
+            result += "|";
+        else
+            result += " ";
+    }
+
+    result += " " + percent.substr(0,5) + " /100%";
+    return result;
 }
 
 ifstream Util::getStream(string path) {
