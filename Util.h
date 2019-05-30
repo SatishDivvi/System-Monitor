@@ -9,6 +9,10 @@ class Util {
         static ifstream getStream(string path);
 };
 
+string Util::convertToTime(long int seconds) {
+    
+}
+
 ifstream Util::getStream(string path) {
     ifstream readFile(path);
     if(!readFile)
