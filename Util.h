@@ -10,5 +10,6 @@ class Util {
 };
 
 ifstream Util::getStream(string path) {
-
+    ifstream readFile(path);
+    
 }
