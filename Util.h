@@ -11,6 +11,11 @@ class Util {
 
 string Util::convertToTime(long int seconds) {
     long minutes = seconds / 60;
+    long hours = minutes / 60;
+    long seconds = int(seconds%60);
+    minutes = int(minutes%60);
+    string result = to_string(hours) + ":" + to_string(minutes) + ":" + to_string(seconds);
+    return result;
 }
 
 ifstream Util::getStream(string path) {
