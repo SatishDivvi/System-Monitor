@@ -11,5 +11,7 @@ class Util {
 
 ifstream Util::getStream(string path) {
     ifstream readFile(path);
-    
+    if(!readFile)
+        throw runtime_error("No File Exists");
+    return readFile;
 }
