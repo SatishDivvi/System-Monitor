@@ -64,3 +64,7 @@ std::vector<std::string> ProcessParser::get_pid_list() {
         throw std::runtime_error(std::strerror(errno));
     return pidLists;
 }
+
+std::string ProcessParser::get_vm_size(std::string pid) {
+    
+}
