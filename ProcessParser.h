@@ -70,4 +70,17 @@ std::string ProcessParser::get_vm_size(std::string pid) {
     string vm_data, total_size;
     float output;
     ifstream readFile = Util::getStream((Path::BasePath() + pid + Path::memPath()));
+    while(std::getline(readFile, line)){
+        std::istringstream lines(line);
+        if(lines >> vm_data >> total_size){
+            if(vm_data=="VmData"){
+                output = (std::stof(total_size)/1024);
+                break;
+            }
+            else {
+                continue;
+            }
+                
+        }
+    }
 }
