@@ -8,3 +8,7 @@ class Util {
         static string getProgressBar(string percent);
         static ifstream getStream(string path);
 };
+
+ifstream Util::getStream(string path) {
+
+}
