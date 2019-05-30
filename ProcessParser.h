@@ -45,7 +45,7 @@ std::string ProcessParser::get_cmd(std::string pid){
     return line;
 }
 
-std::vector<std::string> get_pid_list() {
+std::vector<std::string> ProcessParser::get_pid_list() {
     DIR* dir;
     dirent* entry;
     std::vector<std::string> pidLists;
