@@ -83,4 +83,5 @@ std::string ProcessParser::get_vm_size(std::string pid) {
                 
         }
     }
+    return std::to_string(output) + "MB";
 }
