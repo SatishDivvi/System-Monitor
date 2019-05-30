@@ -5,4 +5,5 @@ using namespace std;
 class Util {
     public:
         static string convertToTime(long int seconds);
+        static string getProgressBar(string percent);
 };
