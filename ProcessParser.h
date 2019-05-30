@@ -46,5 +46,21 @@ std::string ProcessParser::get_cmd(std::string pid){
 }
 
 std::vector<std::string> get_pid_list() {
-
+    DIR* dir;
+    dirent* entry;
+    std::vector<std::string> pidLists;
+    dir = opendir("/proc");
+    if(!dir)
+        throw std::runtime_error("No Directory Exists");
+    while(entry = readdir(dir)){
+        if(entry->d_type != DT_DIR){
+            continue;
+        }
+        if(std::all_of(entry->d_name, entry->d_name + entry->d_reclen, [](char c){ return std::isdigit(c); })){
+            pidLists.push_back(entry->d_name);
+        }
+    }
+    if(!closedir(dir))
+        throw std::runtime_error(std::strerror(errno));
+    return pidLists;
 }
