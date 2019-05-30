@@ -66,5 +66,6 @@ std::vector<std::string> ProcessParser::get_pid_list() {
 }
 
 std::string ProcessParser::get_vm_size(std::string pid) {
-    
+    std::string line;
+
 }
