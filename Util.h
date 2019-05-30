@@ -18,6 +18,10 @@ string Util::convertToTime(long int seconds) {
     return result;
 }
 
+string Util::getProgressBar(string percent) {
+    
+}
+
 ifstream Util::getStream(string path) {
     ifstream readFile(path);
     if(!readFile)
