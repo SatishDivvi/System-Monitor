@@ -10,7 +10,7 @@ class Util {
 };
 
 string Util::convertToTime(long int seconds) {
-    
+    long minutes = seconds / 60;
 }
 
 ifstream Util::getStream(string path) {
