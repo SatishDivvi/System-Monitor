@@ -94,6 +94,10 @@ std::string ProcessParser::get_cpu_percent(std::string pid) {
     std::istringstream lines(line);
     std::istream_iterator<std::string> beg(lines), end;
     std::vector<std::string> statList (beg, end);
+    float upTime = std::stof(ProcessParser::get_proc_up_time(pid));
+    float kernelTime = std::stof(statList[14]);
+    float cuTime = std::stof(statList[15]);
+    float csTime = std::stof(statList[16]);
 }
 
 long int ProcessParser::get_sys_up_time() {
