@@ -103,5 +103,6 @@ long int ProcessParser::get_sys_up_time() {
 }
 
 std::string ProcessParser::get_proc_up_time(std::string pid) {
-    
+    std::string line;
+    std::string output;
 }
