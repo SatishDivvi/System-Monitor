@@ -101,3 +101,7 @@ long int ProcessParser::get_sys_up_time() {
     time = std::stoi(uptime);
     return time;
 }
+
+std::string ProcessParser::get_proc_up_time(std::string pid) {
+    
+}
