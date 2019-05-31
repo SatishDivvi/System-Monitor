@@ -129,3 +129,7 @@ std::string ProcessParser::get_proc_up_time(std::string pid) {
     output = stof(statList[13])/sysconf(_SC_CLK_TCK);
     return std::to_string(output);
 }
+
+std::string ProcessParser::get_proc_user(std::string pid)  {
+    
+}
