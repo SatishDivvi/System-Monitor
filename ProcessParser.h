@@ -97,4 +97,7 @@ long int ProcessParser::get_sys_up_time() {
     std::getline(readFile, line);
     std::string uptime, freetime;
     std::istringstream lines(line);
+    lines >> uptime >> freetime;
+    time = std::stoi(uptime);
+    return time;
 }
