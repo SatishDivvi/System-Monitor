@@ -90,6 +90,10 @@ std::string ProcessParser::get_cpu_percent(std::string pid) {
     std::string line;
     float cpu_percent;
     ifstream readFile = Util::getStream(Path::basePath() + pid + "/" + Path::statPath());
+    std::getline(readFile, line);
+    std::istringstream lines(line);
+    std::istream_iterator<std::string> beg(lines), end;
+    std::vector<std::string> statList (beg, end);
 }
 
 long int ProcessParser::get_sys_up_time() {
