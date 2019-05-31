@@ -102,6 +102,8 @@ std::string ProcessParser::get_cpu_percent(std::string pid) {
     float startTime = std::stof(statList[21]);
     float sys_up_time = ProcessParser::get_sys_up_time();
     float seconds = sys_up_time - (startTime / sysconf(_SC_CLK_TCK));
+    cpu_percent = 100.0 * ((totalTime / sysconf(_SC_CLK_TCK)) / seconds);
+    return std::to_string(cpu_percent);
 }
 
 long int ProcessParser::get_sys_up_time() {
