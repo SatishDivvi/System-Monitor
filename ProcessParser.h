@@ -96,4 +96,5 @@ long int ProcessParser::get_sys_up_time() {
     ifstream readFile = Util::getStream((Path::basePath() + Path::upTimePath()));
     std::getline(readFile, line);
     std::string uptime, freetime;
+    std::istringstream lines(line);
 }
