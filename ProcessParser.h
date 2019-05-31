@@ -87,7 +87,8 @@ std::string ProcessParser::get_vm_size(std::string pid) {
 }
 
 std::string ProcessParser::get_cpu_percent(std::string pid) {
-
+    std::string line;
+    float cpu_percent;
 }
 
 long int ProcessParser::get_sys_up_time() {
