@@ -104,12 +104,12 @@ long int ProcessParser::get_sys_up_time() {
 
 std::string ProcessParser::get_proc_up_time(std::string pid) {
     std::string line;
-    std::string output;
+    float output;
     ifstream readFile = Util::getStream(Path::basePath() + pid + "/" + Path::statPath());
     std::getline(readFile, line);
     std::istringstream lines(line);
     std::istream_iterator<std::string> beg(lines), end;
     std::vector<std::string> statList (beg, end);
     output = stof(statList[13])/sysconf(_SC_CLK_TCK);
-    return output;
+    return std::to_string(output);
 }
