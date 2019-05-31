@@ -73,7 +73,7 @@ std::string ProcessParser::get_vm_size(std::string pid) {
     while(std::getline(readFile, line)){
         std::istringstream lines(line);
         if(lines >> vm_data >> total_size){
-            if(vm_data=="VmData"){
+            if(vm_data=="VmData:"){
                 output = (std::stof(total_size)/1024);
                 break;
             }
