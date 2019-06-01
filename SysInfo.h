@@ -22,6 +22,13 @@ class SysInfo {
         int threads;
     
     public:
+        SysInfo() {
+            this->get_other_cores(5);
+            this->set_last_cpu_measures();
+            this->set_attributes();
+            this->os_name = ProcessParser::get_os_name();
+            this->kernel_ver = ProcessParser::get_sys_kernel_version();
+        };
         void set_attributes();
         void set_last_cpu_measures();
         string get_mem_percent() const;
