@@ -241,4 +241,6 @@ float ProcessParser::get_sys_ram_percent() {
             buffers = stof(value);
         }
     }
+
+    system_ram_percent = 100.0 * (memFree / (memAvailable - buffers));
 }
