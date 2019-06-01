@@ -219,4 +219,26 @@ float ProcessParser::get_sys_ram_percent() {
     float memFree = 0;
     float buffers = 0;
     float system_ram_percent;
+    while(std::getline(readFile, line)){
+        if(memAvailable != 0 && memFree != 0 && buffers !=0)
+            break;
+        if(line.find("MemAvailable:") != -1) {
+            std::istringstream lines(line);
+            std::string tag, value;
+            lines >> tag >> value;
+            memAvailable = stof(value);
+        }
+        if(line.find("MemFree:") != -1) {
+            std::istringstream lines(line);
+            std::string tag, value;
+            lines >> tag >> value;
+            memFree = stof(value);
+        }
+        if(line.find("Buffers:") != -1) {
+            std::istringstream lines(line);
+            std::string tag, value;
+            lines >> tag >> value;
+            buffers = stof(value);
+        }
+    }
 }
