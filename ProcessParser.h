@@ -198,5 +198,6 @@ float get_sys_total_cpu_time(std::vector<std::string> cpuStates) {
 }
 
 float get_sys_idle_cpu_time(std::vector<std::string> cpuStates) {
-
+    float s_idle = std::stof(cpuStates[S_IDLE]);
+    float s_iowait = std::stof(cpuStates[S_IOWAIT]);
 }
