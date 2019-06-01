@@ -250,4 +250,11 @@ std::string ProcessParser::get_sys_kernel_version(){
     std::string line;
     ifstream readFile = Util::getStream(Path::basePath() + Path::versionPath());
     std::getline(readFile, line);
+    if(line.find("Linux version") != -1) {
+    	std::istringstream lines(line);
+      	std::istream_iterator<std::string> beg(lines), end;
+      	std::vector<std::string> versionList (beg, end);
+      	return versionList[2];
+    }
+  	return "";
 }
