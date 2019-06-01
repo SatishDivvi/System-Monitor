@@ -283,4 +283,13 @@ int ProcessParser::get_total_number_of_processes() {
     std::string line;
     int total_processes = 0;
     ifstream readFile = Util::getStream(Path::basePath() + Path::statPath());
+    while(std::getline(readFile, line)) {
+        if(line.find("processes") != -1) {
+            std::istringstream lines(line);
+            std::string tag, value;
+            lines >> tag >> value;
+            total_processes = std::stoi(value);
+            break;
+        }
+    }
 }
