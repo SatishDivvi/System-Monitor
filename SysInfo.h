@@ -4,3 +4,7 @@
 #include "ProcessParser.h"
 
 using namespace std;
+
+class SysInfo {
+
+};
