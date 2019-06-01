@@ -47,3 +47,7 @@ class SysInfo {
 string SysInfo::get_cpu_percent() const {
     return this->cpu_percent;
 }
+
+string SysInfo::get_mem_percent() const {
+    return to_string(this->mem_percent);
+}
