@@ -276,4 +276,5 @@ int ProcessParser::get_total_threads(){
             }
         }
     }
+    return total_threads;
 }
