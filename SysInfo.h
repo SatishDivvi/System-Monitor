@@ -59,3 +59,7 @@ string SysInfo::get_os_name() const {
 string SysInfo::get_kernel_version() const {
     return this->kernel_ver;
 }
+
+long SysInfo::get_up_time() const {
+    return this->up_time;
+}
