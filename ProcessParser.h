@@ -156,3 +156,7 @@ std::string ProcessParser::get_proc_user(std::string pid)  {
      return "";
 }
 
+std::string ProcessParser::get_no_of_cores() {
+    
+}
+
