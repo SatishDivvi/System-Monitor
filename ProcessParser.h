@@ -317,4 +317,12 @@ std::string ProcessParser::get_os_name() {
     std::string line;
     ifstream readFile = Util::getStream("/etc/os-release");
     std::string os_name;
+    while(std::getline(readFile, line)){
+        if(line.find("PRETTY_NAME") != -1) {
+            std::size_t seperator = line.find("=") + 1;
+            os_name = line.substr(seperator);
+            os_name.erase(std::remove(os_name.begin(), os_name.end(), '"'), os_name.end());
+            break;
+        }
+    }
 }
