@@ -325,4 +325,5 @@ std::string ProcessParser::get_os_name() {
             break;
         }
     }
+    return os_name;
 }
