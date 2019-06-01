@@ -170,7 +170,7 @@ std::string ProcessParser::get_no_of_cores() {
     return "0";
 }
 
-std::vector<std::string> ProcessParser::get_sys_cpu_percent(std::string coreNumber = "") {
+std::vector<std::string> ProcessParser::get_sys_cpu_percent(std::string coreNumber) {
     std::string line;
     ifstream readFile = Util::getStream(Path::basePath() + Path::statPath());
     while(std::getline(readFile, line)){
