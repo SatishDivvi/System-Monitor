@@ -203,3 +203,7 @@ float get_sys_idle_cpu_time(std::vector<std::string> cpuStates) {
     float idle_cpu_time = s_idle + s_iowait;
     return idle_cpu_time;
 }
+
+std::string ProcessParser::print_cpu_stats(std::vector<std::string> previous_time, std::vector<std::string> current_time) {
+
+}
