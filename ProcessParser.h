@@ -143,5 +143,7 @@ std::string ProcessParser::get_proc_user(std::string pid)  {
             output = "x:"+ uid;
             break;
     }
+
+    readFile = Util::getStream("/etc/passwd");
 }
 
