@@ -209,4 +209,5 @@ std::string ProcessParser::print_cpu_stats(std::vector<std::string> previous_tim
     float cpu_idle_time = get_sys_idle_cpu_time(current_time) - get_sys_idle_cpu_time(previous_time);
     float cpu_active_time = cpu_total_time - cpu_idle_time;
     float sys_cpu_percent = 100.0 * (cpu_active_time / cpu_total_time);
+    return std::to_string(sys_cpu_percent);
 }
