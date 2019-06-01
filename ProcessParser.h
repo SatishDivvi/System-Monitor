@@ -133,5 +133,6 @@ std::string ProcessParser::get_proc_up_time(std::string pid) {
 std::string ProcessParser::get_proc_user(std::string pid)  {
     std::string line;
     ifstream readFile = Util::getStream(Path::basePath() + pid + Path::statPath());
+    std::string output;
 }
 
