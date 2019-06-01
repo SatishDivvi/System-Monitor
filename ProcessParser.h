@@ -183,3 +183,7 @@ std::vector<std::string> ProcessParser::get_sys_cpu_percent(std::string coreNumb
     }
     return std::vector<std::string>();
 }
+
+float get_sys_total_cpu_time(std::vector<std::string> cpuStates) {
+    
+}
