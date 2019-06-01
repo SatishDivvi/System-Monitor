@@ -170,3 +170,6 @@ std::string ProcessParser::get_no_of_cores() {
     return "0";
 }
 
+std::vector<std::string> ProcessParser::get_sys_cpu_percent(std::string coreNumber = "") {
+    
+}
