@@ -314,5 +314,7 @@ int ProcessParser::get_number_of_running_processes() {
 
 
 std::string ProcessParser::get_os_name() {
-
+    std::string line;
+    ifstream readFile = Util::getStream("/etc/os-release");
+    std::string os_name;
 }
