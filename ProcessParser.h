@@ -145,5 +145,13 @@ std::string ProcessParser::get_proc_user(std::string pid)  {
     }
 
     readFile = Util::getStream("/etc/passwd");
+    while(std::getline(readFile, line)){
+         if(line.find(output) != -1) {
+             output = line.substr(0, line.find(":"));
+             return output;
+         }
+     }
+
+     return "";
 }
 
