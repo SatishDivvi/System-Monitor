@@ -43,3 +43,7 @@ class SysInfo {
         void set_cpu_cores_stats();
         vector<string> get_cores_stats() const;
 };
+
+string SysInfo::get_cpu_percent() const {
+    return this->cpu_percent;
+}
