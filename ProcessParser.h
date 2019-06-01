@@ -310,3 +310,9 @@ int ProcessParser::get_number_of_running_processes() {
     }
     return total_running_processes;
 }
+
+
+
+std::string ProcessParser::get_os_name() {
+
+}
