@@ -262,4 +262,18 @@ std::string ProcessParser::get_sys_kernel_version(){
 int ProcessParser::get_total_threads(){
     std::string line;
     std::vector<std::string> pidList = ProcessParser::get_pid_list();
+    int total_threads = 0;
+    for(int i=0; i<pidList.size(); i++) {
+        std::string pid = pidList[i];
+        ifstream readFile = Util::getStream(Path::basePath() + pid + Path::statusPath());
+        while(std::getline(readFile, line)){
+            if(line.find("Thread") != -1) {
+                std::istringstream lines(line);
+                std::string tag, value;
+                lines >> tag >> value;
+                total_threads += std::stoi(value);
+                break;
+            }
+        }
+    }
 }
