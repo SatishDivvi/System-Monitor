@@ -296,5 +296,7 @@ int ProcessParser::get_total_number_of_processes() {
 }
 
 int ProcessParser::get_number_of_running_processes() {
-
+    std::string line;
+    int total_running_processes = 0;
+    ifstream readFile = Util::getStream(Path::basePath() + Path::statPath());
 }
