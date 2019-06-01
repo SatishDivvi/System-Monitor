@@ -28,7 +28,7 @@ class ProcessParser {
         static long int get_sys_up_time();
         static std::string get_proc_up_time(std::string pid);
         static std::string get_proc_user(std::string pid);
-        static std::string get_no_of_cores();
+        static int get_no_of_cores();
         static std::vector<std::string> get_sys_cpu_percent(std::string coreNumber = "");
         static float get_sys_ram_percent();
         static std::string get_sys_kernel_version();
@@ -156,7 +156,7 @@ std::string ProcessParser::get_proc_user(std::string pid)  {
      return "";
 }
 
-std::string ProcessParser::get_no_of_cores() {
+int ProcessParser::get_no_of_cores() {
     std::string line;
     ifstream readFile = Util::getStream(Path::basePath() + "cpuinfo");
     while(std::getline(readFile, line)){
@@ -164,10 +164,10 @@ std::string ProcessParser::get_no_of_cores() {
             std::istringstream lines(line);
             std::istream_iterator<std::string> beg(lines), end;
             std::vector<std::string> cpu_cores (beg, end);
-            return cpu_cores[3];
+            return std::stoi(cpu_cores[3]);
         }
     }
-    return "0";
+    return 0;
 }
 
 std::vector<std::string> ProcessParser::get_sys_cpu_percent(std::string coreNumber) {
