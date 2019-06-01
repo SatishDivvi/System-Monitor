@@ -23,7 +23,7 @@ class SysInfo {
     
     public:
         SysInfo() {
-            this->get_other_cores(5);
+            this->get_other_cores(ProcessParser::get_no_of_cores());
             this->set_last_cpu_measures();
             this->set_attributes();
             this->os_name = ProcessParser::get_os_name();
