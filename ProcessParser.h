@@ -185,5 +185,12 @@ std::vector<std::string> ProcessParser::get_sys_cpu_percent(std::string coreNumb
 }
 
 float get_sys_total_cpu_time(std::vector<std::string> cpuStates) {
-    
+    float s_user = std::stof(cpuStates[S_USER]);
+    float s_nice = std::stof(cpuStates[S_NICE]);
+    float s_system = std::stof(cpuStates[S_SYSTEM]);
+    float s_idle = std::stof(cpuStates[S_IDLE]);
+    float s_iowait = std::stof(cpuStates[S_IOWAIT]);
+    float s_irq = std::stof(cpuStates[S_IRQ]);
+    float s_softirq = std::stof(cpuStates[S_SOFTIRQ]);
+    float s_steal = std::stof(cpuStates[S_STEAL]);
 }
