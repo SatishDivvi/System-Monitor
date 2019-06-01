@@ -247,5 +247,7 @@ float ProcessParser::get_sys_ram_percent() {
 }
 
 std::string ProcessParser::get_sys_kernel_version(){
-
+    std::string line;
+    ifstream readFile = Util::getStream(Path::basePath() + Path::versionPath());
+    std::getline(readFile, line);
 }
