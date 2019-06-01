@@ -28,6 +28,7 @@ class ProcessParser {
         static long int get_sys_up_time();
         static std::string get_proc_up_time(std::string pid);
         static std::string get_proc_user(std::string pid);
+        static std::string get_number_of_cores();
         static std::vector<std::string> get_sys_cpu_percent(std::string coreNumber = "");
         static float get_sys_ram_percent();
         static std::string get_sys_kernel_version();
