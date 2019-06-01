@@ -278,3 +278,7 @@ int ProcessParser::get_total_threads(){
     }
     return total_threads;
 }
+
+int ProcessParser::get_total_number_of_processes() {
+
+}
