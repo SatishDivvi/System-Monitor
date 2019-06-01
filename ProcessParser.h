@@ -258,3 +258,7 @@ std::string ProcessParser::get_sys_kernel_version(){
     }
     return "";
 }
+
+int ProcessParser::get_total_threads(){
+
+}
