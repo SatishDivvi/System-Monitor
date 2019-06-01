@@ -63,3 +63,7 @@ string SysInfo::get_kernel_version() const {
 long SysInfo::get_up_time() const {
     return this->up_time;
 }
+
+string SysInfo::get_total_proc() const {
+    return to_string(this->total_proc);
+}
