@@ -193,4 +193,5 @@ float get_sys_total_cpu_time(std::vector<std::string> cpuStates) {
     float s_irq = std::stof(cpuStates[S_IRQ]);
     float s_softirq = std::stof(cpuStates[S_SOFTIRQ]);
     float s_steal = std::stof(cpuStates[S_STEAL]);
+    float total_cpu_time = s_user + s_nice + s_system + s_idle + s_iowait + s_irq + s_softirq + s_steal;
 }
