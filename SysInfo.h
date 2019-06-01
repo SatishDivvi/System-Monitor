@@ -75,3 +75,7 @@ string SysInfo::get_running_proc() const {
 string SysInfo::get_threads() const {
     return to_string(this->threads);
 }
+
+void SysInfo::set_last_cpu_measures() {
+    this->last_cpu_stats = ProcessParser::get_sys_cpu_percent();
+}
