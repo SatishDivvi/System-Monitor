@@ -280,5 +280,7 @@ int ProcessParser::get_total_threads(){
 }
 
 int ProcessParser::get_total_number_of_processes() {
-
+    std::string line;
+    int total_processes = 0;
+    ifstream readFile = Util::getStream(Path::basePath() + Path::statPath());
 }
