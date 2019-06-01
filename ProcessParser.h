@@ -196,3 +196,7 @@ float get_sys_total_cpu_time(std::vector<std::string> cpuStates) {
     float total_cpu_time = s_user + s_nice + s_system + s_idle + s_iowait + s_irq + s_softirq + s_steal;
     return total_cpu_time;
 }
+
+float get_sys_idle_cpu_time(std::vector<std::string> cpuStates) {
+
+}
