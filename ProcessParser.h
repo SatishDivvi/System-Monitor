@@ -294,3 +294,7 @@ int ProcessParser::get_total_number_of_processes() {
     }
     return total_processes;
 }
+
+int ProcessParser::get_number_of_running_processes() {
+
+}
