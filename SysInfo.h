@@ -12,7 +12,7 @@ class SysInfo {
         vector<string> core_stats;
         vector<vector<string>> last_cpu_cores_stats;
         vector<vector<string>> current_cpu_cores_stats;
-        string cpu_stats;
+        string cpu_percent;
         float mem_percent;
         string os_name;
         string kernel_ver;
