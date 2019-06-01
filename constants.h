@@ -4,6 +4,17 @@
 #include <string>
 using namespace std;
 
+enum CPUStates {
+    S_USER = 1,
+    S_NICE,
+    S_SYSTEM,
+    S_IDLE,
+    S_IOWAIT,
+    S_IRQ,
+    S_SOFTIRQ,
+    S_STEAL
+};
+
 class Path {
     public:
         static string basePath() {
