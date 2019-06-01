@@ -211,3 +211,7 @@ std::string ProcessParser::print_cpu_stats(std::vector<std::string> previous_tim
     float sys_cpu_percent = 100.0 * (cpu_active_time / cpu_total_time);
     return std::to_string(sys_cpu_percent);
 }
+
+float ProcessParser::get_sys_ram_percent() {
+    
+}
