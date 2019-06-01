@@ -134,5 +134,14 @@ std::string ProcessParser::get_proc_user(std::string pid)  {
     std::string line;
     ifstream readFile = Util::getStream(Path::basePath() + pid + Path::statPath());
     std::string output;
+    while(std::getline(readFile, line)){
+        std::istringstream lines(line);
+        std::string tag;
+        std::string uid;
+        lines >> tag >> uid;
+        if(tag == "Uid:")
+            output = "x:"+ uid;
+            break;
+    }
 }
 
