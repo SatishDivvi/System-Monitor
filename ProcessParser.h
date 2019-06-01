@@ -243,4 +243,5 @@ float ProcessParser::get_sys_ram_percent() {
     }
 
     system_ram_percent = 100.0 * (memFree / (memAvailable - buffers));
+    return system_ram_percent;
 }
