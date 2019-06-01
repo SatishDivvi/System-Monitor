@@ -299,4 +299,13 @@ int ProcessParser::get_number_of_running_processes() {
     std::string line;
     int total_running_processes = 0;
     ifstream readFile = Util::getStream(Path::basePath() + Path::statPath());
+    while(std::getline(readFile, line)) {
+        if(line.find("procs_running") != -1) {
+            std::istringstream lines(line);
+            std::string tag, value;
+            lines >> tag >> value;
+            total_running_processes = std::stoi(value);
+            break;
+        }
+    }
 }
