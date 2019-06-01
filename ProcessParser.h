@@ -159,5 +159,14 @@ std::string ProcessParser::get_proc_user(std::string pid)  {
 std::string ProcessParser::get_no_of_cores() {
     std::string line;
     ifstream readFile = Util::getStream(Path::basePath() + "cpuinfo");
+    while(std::getline(readFile, line)){
+        if(line.find("cpu cores") != -1) {
+            std::istringstream lines(line);
+            std::istream_iterator<std::string> beg(lines), end;
+            std::vector<std::string> cpu_cores (beg, end);
+            return cpu_cores[3];
+        }
+    }
+    return "0";
 }
 
