@@ -260,5 +260,6 @@ std::string ProcessParser::get_sys_kernel_version(){
 }
 
 int ProcessParser::get_total_threads(){
-
+    std::string line;
+    std::vector<std::string> pidList = ProcessParser::get_pid_list();
 }
