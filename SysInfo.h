@@ -55,3 +55,7 @@ string SysInfo::get_mem_percent() const {
 string SysInfo::get_os_name() const {
     return this->os_name;
 }
+
+string SysInfo::get_kernel_version() const {
+    return this->kernel_ver;
+}
