@@ -71,3 +71,7 @@ string SysInfo::get_total_proc() const {
 string SysInfo::get_running_proc() const {
     return to_string(this->running_proc);
 }
+
+string SysInfo::get_threads() const {
+    return to_string(this->threads);
+}
