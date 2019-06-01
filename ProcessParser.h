@@ -292,4 +292,5 @@ int ProcessParser::get_total_number_of_processes() {
             break;
         }
     }
+    return total_processes;
 }
