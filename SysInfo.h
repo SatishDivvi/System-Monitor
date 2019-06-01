@@ -67,3 +67,7 @@ long SysInfo::get_up_time() const {
 string SysInfo::get_total_proc() const {
     return to_string(this->total_proc);
 }
+
+string SysInfo::get_running_proc() const {
+    return to_string(this->running_proc);
+}
