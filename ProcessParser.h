@@ -213,5 +213,6 @@ std::string ProcessParser::print_cpu_stats(std::vector<std::string> previous_tim
 }
 
 float ProcessParser::get_sys_ram_percent() {
-    
+    std::string line;
+    ifstream readFile = Util::getStream(Path::basePath() + Path::memPath());
 }
