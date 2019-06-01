@@ -51,3 +51,7 @@ string SysInfo::get_cpu_percent() const {
 string SysInfo::get_mem_percent() const {
     return to_string(this->mem_percent);
 }
+
+string SysInfo::get_os_name() const {
+    return this->os_name;
+}
