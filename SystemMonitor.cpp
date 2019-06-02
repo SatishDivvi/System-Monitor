@@ -23,7 +23,7 @@ void writeSysInfoToConsole(SysInfo sys, WINDOW* sys_win)
 {
     sys.setAttributes();
 
-    mvwprintw(sys_win,2,2,getCString(( "OS: " + sys.getOSName())));
+    mvwprintw(sys_win,2,2,getCString(( "OS: " + sys.get_os_name())));
     mvwprintw(sys_win,3,2,getCString(( "Kernel version: " + sys.get_kernel_version())));
     mvwprintw(sys_win,4,2,getCString( "CPU: "));
     wattron(sys_win,COLOR_PAIR(1));
