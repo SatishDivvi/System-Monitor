@@ -91,3 +91,7 @@ void SysInfo::get_other_cores(int _size) {
         this->last_cpu_cores_stats[i] = ProcessParser::get_sys_cpu_percent(to_string(i));
     }
 }
+
+void SysInfo::set_cpu_cores_stats() {
+    
+}
