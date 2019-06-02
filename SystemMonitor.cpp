@@ -46,7 +46,7 @@ void writeSysInfoToConsole(SysInfo sys, WINDOW* sys_win)
 
 }
 
-void getProcessListToConsole(ProcessContainer procs,WINDOW* win)
+void getProcessListToConsole(vector<string> processes,WINDOW* win)
 {
     wattron(win,COLOR_PAIR(2));
     mvwprintw(win,1,2,"PID:");
@@ -56,9 +56,8 @@ void getProcessListToConsole(ProcessContainer procs,WINDOW* win)
     mvwprintw(win,1,35,"Uptime:");
     mvwprintw(win,1,44,"CMD:");
     wattroff(win, COLOR_PAIR(2));
-    for(int i = 0; i < 10; i++) {
-        vector<std::string> processes = procs.get_list();
-        mvwprintw(win,2 +i,2,getCString(processes[i]));
+    for(int i = 0; i < processes.size(); i++) {
+        mvwprintw(win,2+i,2,getCString(processes[i]));
     }
 }
 
