@@ -40,3 +40,7 @@ class Process {
         // Getter for time attribute
         string get_up_time() const;
 };
+
+void Process::set_PID(int pid) {
+    this->PID = pid;
+}
