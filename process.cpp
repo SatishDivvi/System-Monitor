@@ -30,7 +30,7 @@ class Process {
         // Getter for PID Attribute
         string get_PID() const;
         // Getter for user attribute
-        string getUser() const;
+        string get_user() const;
         // Getter for cmd attribute
         string getCMD() const;
         // Getter for Cpu_utilization attribute
