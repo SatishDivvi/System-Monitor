@@ -32,7 +32,7 @@ class Process {
         // Getter for user attribute
         string get_user() const;
         // Getter for cmd attribute
-        string getCMD() const;
+        string get_cmd() const;
         // Getter for Cpu_utilization attribute
         string getCPUUsage() const;
         // Getter for memory_utilization attribute
