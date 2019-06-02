@@ -17,7 +17,7 @@ class Process {
     
     public:
         // Default Constructor
-        Process(){};
+        Process(string pid){};
         // Setter for assigining values to class attributes.
         void setProcessAttributes(string pid, string user, string cmd, string cpu_utilization, string memory, string up_time);
         // Getter for PID Attribute
