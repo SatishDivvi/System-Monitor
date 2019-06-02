@@ -1,3 +1,6 @@
+#ifndef ProcessContainer_H
+#define ProcessContainer_H
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -47,3 +50,5 @@ vector<string> ProcessContainer::get_list()
     }
     return values;
 }
+
+#endif
