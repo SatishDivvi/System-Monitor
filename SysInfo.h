@@ -9,7 +9,7 @@ class SysInfo {
     private:
         vector<string> last_cpu_stats;
         vector<string> current_cpu_stats;
-        vector<string> core_stats;
+        vector<string> cores_stats;
         vector<vector<string>> last_cpu_cores_stats;
         vector<vector<string>> current_cpu_cores_stats;
         string cpu_percent;
@@ -81,8 +81,8 @@ void SysInfo::set_last_cpu_measures() {
 }
 
 void SysInfo::get_other_cores(int _size) {
-    this->core_stats = vector<string>();
-    this->core_stats.resize(_size);
+    this->cores_stats = vector<string>();
+    this->cores_stats.resize(_size);
     this->last_cpu_cores_stats = vector<vector<string>>();
     this->last_cpu_cores_stats.resize(_size);
     this->current_cpu_cores_stats = vector<vector<string>>();
@@ -98,7 +98,7 @@ void SysInfo::set_cpu_cores_stats() {
     }
 
     for(int i=0; i < this->current_cpu_cores_stats.size(); i++) {
-        this->core_stats[i] = ProcessParser::print_cpu_stats(this->last_cpu_cores_stats[i], this->current_cpu_cores_stats[i]);
+        this->cores_stats[i] = ProcessParser::print_cpu_stats(this->last_cpu_cores_stats[i], this->current_cpu_cores_stats[i]);
     }
 
     this->last_cpu_cores_stats = this->current_cpu_cores_stats;
@@ -114,4 +114,19 @@ void SysInfo::set_attributes() {
     this->cpu_percent = ProcessParser::print_cpu_stats(this->last_cpu_stats, this->current_cpu_stats);
     this->last_cpu_stats = this->current_cpu_stats;
     this->set_cpu_cores_stats();
+}
+
+vector<string> SysInfo::get_cores_stats() const
+{
+    vector<string> result = vector<string>();
+    for (int i = 0; i < this->cores_stats.size() ;i++) {
+        string temp = ("cpu" + to_string(i) +": ");
+        float check = stof(this->cores_stats[i]);
+        if (!check || this->cores_stats[i] == "nan") {
+            return vector<string>();
+        }
+        temp += Util::getProgressBar(this->cores_stats[i]);
+        result.push_back(temp);
+    }
+    return result;
 }
