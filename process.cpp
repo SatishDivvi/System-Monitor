@@ -7,7 +7,7 @@ using std::string;
 class Process {
 
     private:
-        int PID;
+        string PID;
         string user;
         string cmd;
         double cpu_utilization;
@@ -18,9 +18,9 @@ class Process {
         // Default Constructor
         Process(){};
         // Setter for assigining values to class attributes.
-        void setProcessAttributes(int pid, string user, string cmd, double cpu_utilization, string memory_utilization, string time);
+        void setProcessAttributes(string pid, string user, string cmd, double cpu_utilization, string memory_utilization, string time);
         // Getter for PID Attribute
-        int getPID() const;
+        string getPID() const;
         // Getter for user attribute
         string getUser() const;
         // Getter for cmd attribute
