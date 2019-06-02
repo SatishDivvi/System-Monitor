@@ -26,7 +26,7 @@ class Process {
             this->up_time = ProcessParser::get_proc_up_time(pid);
         };
         // Setter for assigining values to class attributes.
-        void setProcessAttributes(string pid, string user, string cmd, string cpu_utilization, string memory, string up_time);
+        void set_PID(int pid);
         // Getter for PID Attribute
         string getPID() const;
         // Getter for user attribute
