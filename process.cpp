@@ -36,7 +36,7 @@ class Process {
         // Getter for Cpu_utilization attribute
         string get_cpu_usage() const;
         // Getter for memory_utilization attribute
-        string getMemoryUsage() const;
+        string get_memory() const;
         // Getter for time attribute
         string getUpTime() const;
 };
