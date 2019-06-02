@@ -23,6 +23,7 @@ void writeSysInfoToConsole(SysInfo sys, WINDOW* sys_win)
 {
     sys.set_attributes();
 
+    mvwprintw(sys_win,0,60, getCString(("SYSTEM MONITOR")));
     mvwprintw(sys_win,2,2,getCString(( "OS: " + sys.get_os_name())));
     mvwprintw(sys_win,3,2,getCString(( "Kernel version: " + sys.get_kernel_version())));
     mvwprintw(sys_win,4,2,getCString( "CPU: "));
