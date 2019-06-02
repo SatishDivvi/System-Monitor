@@ -14,6 +14,11 @@ System Monitor is a C++ based Process Monitor which stores system resources and 
 
 ### Project Execution:
 
+1. Compile `SystemMonitor.cpp` file by executing command `g++ -std=c++17 SystemMonitor.cpp -lncurses`.
+2. Execute command `./a.out`.
+3. System Monitor should now be displayed on the screen.
+
+**Note:** _For **Step-1** command line argument `-lncurses` is required as the program will throw compile error without it's presence._
 
 ### Screenshots:
 
