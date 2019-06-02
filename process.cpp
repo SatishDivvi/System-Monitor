@@ -39,6 +39,8 @@ class Process {
         string get_memory() const;
         // Getter for time attribute
         string get_up_time() const;
+        // Getter for fetching process details
+        string get_process() const;
 };
 
 void Process::set_PID(int pid) {
@@ -47,5 +49,10 @@ void Process::set_PID(int pid) {
 
 string Process::get_PID() const {
     return this->PID;
+}
+
+string Process::get_process() const {
+    return(this->PID + "  " + this->user + "  " + this->memory.substr(0,5) + "  " + this->cpu_utilization.substr(0, 5) + "  " + 
+    this->up_time.substr(0, 5) + "  " + this->cmd.substr(0, 30) + "...");
 }
 
