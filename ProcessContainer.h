@@ -6,5 +6,8 @@
 using namespace std;
 
 class ProcessContainer {
-
+    public:
+        ProcessContainer() {
+            
+        }
 };
