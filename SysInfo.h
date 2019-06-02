@@ -1,3 +1,6 @@
+#ifndef SysInfo_H
+#define SysInfo_H
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -130,3 +133,5 @@ vector<string> SysInfo::get_cores_stats() const
     }
     return result;
 }
+
+#endif
