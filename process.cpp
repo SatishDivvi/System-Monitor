@@ -38,5 +38,5 @@ class Process {
         // Getter for memory_utilization attribute
         string get_memory() const;
         // Getter for time attribute
-        string getUpTime() const;
+        string get_up_time() const;
 };
