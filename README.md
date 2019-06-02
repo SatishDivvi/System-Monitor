@@ -2,7 +2,9 @@
 
 ### Introduction:
 
-### Installation
+System Monitor is a C++ based Process Monitor which stores system resources and processes metadata and displays information on the screen.
+
+### Installation:
 
 
 ### Project Execution:
