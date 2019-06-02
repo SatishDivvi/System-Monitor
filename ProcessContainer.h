@@ -14,4 +14,8 @@ class ProcessContainer {
         ProcessContainer() {
 
         }
+
+        void refreshList();
+        string printList();
+        vector<string> get_list();
 };
