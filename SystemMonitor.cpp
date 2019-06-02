@@ -48,7 +48,6 @@ void writeSysInfoToConsole(SysInfo sys, WINDOW* sys_win)
 
 void getProcessListToConsole(ProcessContainer procs,WINDOW* win)
 {
-    procs.refreshList();
     wattron(win,COLOR_PAIR(2));
     mvwprintw(win,1,2,"PID:");
     mvwprintw(win,1,9,"User:");

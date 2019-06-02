@@ -21,7 +21,7 @@ class ProcessContainer {
 
         void refreshList();
         string printList();
-        vector<string> get_list();
+        vector<vector<string>> get_list();
 };
 
 void ProcessContainer::refreshList()
@@ -36,19 +36,31 @@ void ProcessContainer::refreshList()
 
 string ProcessContainer::printList()
 {
-    std::string result="";
+    string result="";
     for (auto i : _list) {
         result += i.get_process();
     }
     return result;
 }
 
-vector<string> ProcessContainer::get_list() 
-{
-    vector<string> values;
-    for (int i = (this->_list.size()-10); i < this->_list.size(); i++){
-        values.push_back(this->_list[i].get_process());
+vector<vector<string>> ProcessContainer::get_list(){
+    vector<vector<string>> values;
+    vector<string> stringifiedList;
+    for(int i=0; i<ProcessContainer::_list.size(); i++){
+        stringifiedList.push_back(ProcessContainer::_list[i].get_process());
     }
+    int lastIndex = 0;
+    for (int i=0; i<stringifiedList.size();i++){
+        if(i %10 == 0 && i > 0){
+          vector<string>  sub(&stringifiedList[i-10], &stringifiedList[i]);
+          values.push_back(sub);
+          lastIndex = i;
+        }
+        if(i == (ProcessContainer::_list.size() - 1) && (i-lastIndex)<10){
+            vector<string> sub(&stringifiedList[lastIndex],&stringifiedList[i+1]);
+            values.push_back(sub);
+        }
+   }
     return values;
 }
 
