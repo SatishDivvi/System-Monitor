@@ -44,3 +44,8 @@ class Process {
 void Process::set_PID(int pid) {
     this->PID = pid;
 }
+
+string Process::get_PID() const {
+    return this->PID;
+}
+
