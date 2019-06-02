@@ -62,3 +62,30 @@ void getProcessListToConsole(ProcessContainer procs,WINDOW* win)
         mvwprintw(win,2 +i,2,getCString(processes[i]));
     }
 }
+
+void printMain(SysInfo sys,ProcessContainer procs)
+{
+    initscr(); // start curses mode
+    noecho(); // not printing input values
+    cbreak(); // Terminating on classic ctrl + c
+    start_color(); // Enabling color change of text
+    int yMax,xMax;
+    getmaxyx(stdscr,yMax,xMax); // getting size of window measured in lines and columns(column one char length)
+    WINDOW *sys_win = newwin(17,xMax-1,0,0);
+    WINDOW *proc_win = newwin(15,xMax-1,18,0);
+
+    init_pair(1,COLOR_BLUE,COLOR_BLACK);
+    init_pair(2,COLOR_GREEN,COLOR_BLACK);
+
+    while (true) {
+        box(sys_win,0,0);
+        box (proc_win,0,0);
+        writeSysInfoToConsole(sys,sys_win);
+        getProcessListToConsole(procs,proc_win);
+        wrefresh(sys_win);
+        wrefresh(proc_win);
+        refresh();
+        sleep(1);
+    }
+    endwin();
+}
