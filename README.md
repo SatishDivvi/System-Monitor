@@ -11,7 +11,6 @@ System Monitor is a C++ based Process Monitor which stores system resources and 
 
 **Note:** _For Step-2 to successfully execute make sure you are in GPU Mode._ 
 
-
 ### Project Execution:
 
 1. Compile `SystemMonitor.cpp` file by executing command `g++ -std=c++17 SystemMonitor.cpp -lncurses`.
