@@ -79,3 +79,7 @@ string SysInfo::get_threads() const {
 void SysInfo::set_last_cpu_measures() {
     this->last_cpu_stats = ProcessParser::get_sys_cpu_percent();
 }
+
+void SysInfo::get_other_cores(int _size) {
+    
+}
