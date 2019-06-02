@@ -2,7 +2,7 @@
 
 ### Introduction:
 
-System Monitor is a C++ based Process Monitor which stores system resources and processes metadata and displays information on the screen.
+System Monitor is a C++ based Process Monitor which stores system resources and processes metadata and displays information on the screen very much like [**htop - An Intereactive Process Viewer**](https://hisham.hm/htop/).
 
 ### Installation:
 
