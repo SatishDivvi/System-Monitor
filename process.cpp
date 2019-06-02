@@ -17,7 +17,14 @@ class Process {
     
     public:
         // Default Constructor
-        Process(string pid){};
+        Process(string pid){
+            this->PID = pid;
+            this->user = ProcessParser::get_proc_user(pid);
+            this->cmd = ProcessParser::get_cmd(pid);
+            this->cpu_utilization = ProcessParser::get_cpu_percent(pid);
+            this->memory = ProcessParser::get_vm_size(pid);
+            this->up_time = ProcessParser::get_proc_up_time(pid);
+        };
         // Setter for assigining values to class attributes.
         void setProcessAttributes(string pid, string user, string cmd, string cpu_utilization, string memory, string up_time);
         // Getter for PID Attribute
