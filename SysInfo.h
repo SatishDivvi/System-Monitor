@@ -110,8 +110,8 @@ void SysInfo::set_cpu_cores_stats() {
 void SysInfo::set_attributes() {
     this->mem_percent = ProcessParser::get_sys_ram_percent();
     this->up_time = ProcessParser::get_sys_up_time();
-    this->get_total_proc = ProcessParser::get_total_number_of_processes();
-    this->get_running_proc = ProcessParser::get_number_of_running_processes();
+    this->total_proc = ProcessParser::get_total_number_of_processes();
+    this->running_proc = ProcessParser::get_number_of_running_processes();
     this->threads = ProcessParser::get_total_threads();
     this->current_cpu_stats = ProcessParser::get_sys_cpu_percent();
     this->cpu_percent = ProcessParser::print_cpu_stats(this->last_cpu_stats, this->current_cpu_stats);
