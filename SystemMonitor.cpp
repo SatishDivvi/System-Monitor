@@ -77,15 +77,24 @@ void printMain(SysInfo sys,ProcessContainer procs)
     init_pair(1,COLOR_BLUE,COLOR_BLACK);
     init_pair(2,COLOR_GREEN,COLOR_BLACK);
 
+    int counter = 0;
     while (true) {
         box(sys_win,0,0);
         box (proc_win,0,0);
+        procs.refreshList();
+        std::vector<std::vector<std::string>> processes = procs.get_list();
         writeSysInfoToConsole(sys,sys_win);
-        getProcessListToConsole(procs,proc_win);
+        getProcessListToConsole(processes[counter],proc_win);
         wrefresh(sys_win);
         wrefresh(proc_win);
         refresh();
         sleep(1);
+        if(counter ==  (processes.size() -1)){
+        counter = 0;
+        }
+        else {
+            counter ++;
+        }
     }
     endwin();
 }
