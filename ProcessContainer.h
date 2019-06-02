@@ -6,8 +6,12 @@
 using namespace std;
 
 class ProcessContainer {
+
+    private:
+        vector<Process> _list;
+
     public:
         ProcessContainer() {
-            
+
         }
 };
