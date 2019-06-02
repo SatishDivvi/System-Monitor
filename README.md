@@ -19,7 +19,7 @@ System Monitor is a C++ based Process Monitor which stores system resources and 
 
 **Note:** _For **Step-1** command line argument `-lncurses` is required as the program will throw compile error without it's presence._
 
-### Screenshots:
+### Video Walkthrough:
 
 <img src="https://i.imgur.com/gNTdDjQ.gif" title="System Monitor" width="80%" alt="System Monitor C++" />
 
