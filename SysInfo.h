@@ -103,3 +103,7 @@ void SysInfo::set_cpu_cores_stats() {
 
     this->last_cpu_cores_stats = this->current_cpu_cores_stats;
 }
+
+void SysInfo::set_attributes() {
+    
+}
