@@ -11,14 +11,14 @@ class Process {
         string user;
         string cmd;
         string cpu_utilization;
-        string memory_utilization;
+        string memory;
         string up_time;
     
     public:
         // Default Constructor
         Process(){};
         // Setter for assigining values to class attributes.
-        void setProcessAttributes(string pid, string user, string cmd, string cpu_utilization, string memory_utilization, string up_time);
+        void setProcessAttributes(string pid, string user, string cmd, string cpu_utilization, string memory, string up_time);
         // Getter for PID Attribute
         string getPID() const;
         // Getter for user attribute
