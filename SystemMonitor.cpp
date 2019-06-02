@@ -72,7 +72,7 @@ void printMain(SysInfo sys,ProcessContainer procs)
     WINDOW *sys_win = newwin(17,xMax-1,0,0);
     WINDOW *proc_win = newwin(15,xMax-1,18,0);
 
-    init_pair(1,COLOR_BLUE,COLOR_BLACK);
+    init_pair(1,COLOR_YELLOW,COLOR_BLACK);
     init_pair(2,COLOR_GREEN,COLOR_BLACK);
 
     int counter = 0;
