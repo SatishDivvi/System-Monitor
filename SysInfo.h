@@ -93,5 +93,13 @@ void SysInfo::get_other_cores(int _size) {
 }
 
 void SysInfo::set_cpu_cores_stats() {
-    
+    for(int i=0; i < this->current_cpu_cores_stats.size(); i++) {
+        this->current_cpu_cores_stats[i] = ProcessParser::get_sys_cpu_percent(to_string(i));
+    }
+
+    for(int i=0; i < this->current_cpu_cores_stats.size(); i++) {
+        this->core_stats[i] = ProcessParser::print_cpu_stats(this->last_cpu_cores_stats[i], this->current_cpu_cores_stats[i]);
+    }
+
+    this->last_cpu_cores_stats = this->current_cpu_cores_stats;
 }
