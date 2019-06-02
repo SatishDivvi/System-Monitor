@@ -21,6 +21,8 @@ System Monitor is a C++ based Process Monitor which stores system resources and 
 
 ### Screenshots:
 
+<img src="https://i.imgur.com/gNTdDjQ.gif" title="System Monitor" width="80%" alt="System Monitor C++" />
+
 ### Author
 
 Divvi Naga Venkata Satish - [Portfolio](https://satishdivvi.github.io)
