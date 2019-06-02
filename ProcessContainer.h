@@ -1,5 +1,5 @@
-#ifndef ProcessContainer_H
-#define ProcessContainer_H
+#ifndef Processcontainer_H
+#define Processcontainer_H
 
 #include <iostream>
 #include <string>
