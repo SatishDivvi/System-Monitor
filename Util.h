@@ -1,3 +1,6 @@
+#ifndef Util_H
+#define Util_H
+
 #include <string>
 #include <fstream>
 using namespace std;
@@ -39,3 +42,5 @@ ifstream Util::getStream(string path) {
         throw runtime_error("No File Exists");
     return readFile;
 }
+
+#endif
