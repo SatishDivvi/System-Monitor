@@ -55,8 +55,8 @@ string Process::get_PID() const {
 }
 
 string Process::get_process() const {
-    return(this->PID + "  " + this->user + "  " + this->memory.substr(0,5) + "  " + this->cpu_utilization.substr(0, 5) + "  " + 
-    this->up_time.substr(0, 5) + "  " + this->cmd.substr(0, 30) + "...");
+    return(this->PID + "    " + this->user + "    " + this->memory.substr(0,5) + "    " + this->cpu_utilization.substr(0, 5) + "    " + 
+    this->up_time.substr(0, 5) + "     " + this->cmd.substr(0, 30) + "..");
 }
 
 #endif
