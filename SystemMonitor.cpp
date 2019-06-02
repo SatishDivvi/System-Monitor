@@ -21,7 +21,7 @@ char* getCString(std::string str){
 
 void writeSysInfoToConsole(SysInfo sys, WINDOW* sys_win)
 {
-    sys.setAttributes();
+    sys.set_attributes();
 
     mvwprintw(sys_win,2,2,getCString(( "OS: " + sys.get_os_name())));
     mvwprintw(sys_win,3,2,getCString(( "Kernel version: " + sys.get_kernel_version())));
