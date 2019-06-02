@@ -28,7 +28,7 @@ class Process {
         // Setter for assigining values to class attributes.
         void set_PID(int pid);
         // Getter for PID Attribute
-        string getPID() const;
+        string get_PID() const;
         // Getter for user attribute
         string getUser() const;
         // Getter for cmd attribute
