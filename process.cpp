@@ -10,7 +10,7 @@ class Process {
         string PID;
         string user;
         string cmd;
-        double cpu_utilization;
+        string cpu_utilization;
         string memory_utilization;
         string time;
     
@@ -18,7 +18,7 @@ class Process {
         // Default Constructor
         Process(){};
         // Setter for assigining values to class attributes.
-        void setProcessAttributes(string pid, string user, string cmd, double cpu_utilization, string memory_utilization, string time);
+        void setProcessAttributes(string pid, string user, string cmd, string cpu_utilization, string memory_utilization, string time);
         // Getter for PID Attribute
         string getPID() const;
         // Getter for user attribute
@@ -26,7 +26,7 @@ class Process {
         // Getter for cmd attribute
         string getCMD() const;
         // Getter for Cpu_utilization attribute
-        double getCPUUsage() const;
+        string getCPUUsage() const;
         // Getter for memory_utilization attribute
         string getMemoryUsage() const;
         // Getter for time attribute
