@@ -1,3 +1,6 @@
+#ifndef ProcessParser_H
+#define ProcessParser_H
+
 #include <algorithm>
 #include <iostream>
 #include <math.h>
@@ -327,3 +330,5 @@ std::string ProcessParser::get_os_name() {
     }
     return os_name;
 }
+
+#endif
