@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include "process.h"
+#include "ProcessParser.h"
 
 using namespace std;
 
